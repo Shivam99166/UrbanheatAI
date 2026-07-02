@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Heat Mitigation Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+🌍 Urban Heat Mitigation Dashboard
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>Dashboard</li>
+
+<li>Heat Map</li>
+
+<li>Simulation</li>
+
+<li>Analytics</li>
+
+<li>AI Report</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="search-bar">
+    <input id="citySearch" type="text" placeholder="Search city...">
+    <button onclick="searchCity()">Search</button>
+</div>
+
+<div class="main-container">
+
+<div class="top-cards">
+
+<div class="card stat">
+
+<h3>Heat Score</h3>
+
+<h1 id="heatScore">82</h1>
+
+<p>High Risk Zone</p>
+
+</div>
+
+<div class="card stat">
+
+<h3>Temperature</h3>
+
+<h1 id="temperature">42°C</h1>
+
+<p>Current Surface Temp</p>
+
+</div>
+
+<div class="card stat">
+
+<h3>Risk Level</h3>
+
+<h1 id="riskLevel">HIGH</h1>
+<p>
+AI Confidence :
+<span id="confidence">
+
+95%
+
+</span>
+</p>
+
+<p>Urban Heat Risk</p>
+
+</div>
+
+<div class="card stat">
+
+<h3>Selected City</h3>
+
+<h1 id="cityName">Delhi</h1>
+
+<p>Zone A</p>
+
+</div>
+
+</div>
+
+<div class="map-section">
+
+<div id="map"></div>
+
+</div>
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<h2>Heat Factors</h2>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+
+<div class="card">
+
+<h2>Reasons</h2>
+
+<ul id="reasons">
+
+<li>Low Vegetation</li>
+
+<li>High Built-up Area</li>
+
+<li>Concrete Dominance</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Suggestions</h2>
+
+<ul id="suggestions">
+
+<li>Add Trees 🌳</li>
+
+<li>Cool Roofs 🏠</li>
+
+<li>Create Green Parks 🌿</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Weather Metrics</h2>
+
+<p>Humidity: <span id="humidity">61%</span></p>
+
+<p>AQI: <span id="aqi">183</span></p>
+
+<p>Wind: <span id="wind">12 km/h</span></p>
+
+<p>Rain: <span id="rain">15%</span></p>
+
+</div>
+
+<div class="card">
+
+<h2>Bar Analysis</h2>
+
+<canvas id="barChart"></canvas>
+
+</div>
+
+<div class="card">
+
+<h2>Radar Overview</h2>
+
+<canvas id="radarChart"></canvas>
+
+</div>
+
+<div class="card">
+
+<h2>AI Recommendation</h2>
+
+<div class="ai-box">
+
+<h3>🤖 Smart Recommendation</h3>
+
+<p id="aiText">
+
+Increase vegetation by 20%.
+
+Install cool roofs.
+
+Develop small urban forests.
+
+Expected reduction: 3°C.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="simulation-section">
+
+<h2>Simulation Panel</h2>
+
+<div class="buttons">
+
+<button onclick="addTrees()">
+
+🌳 Add Trees
+
+</button>
+
+<button onclick="coolRoof()">
+
+🏠 Cool Roofs
+
+</button>
+
+<button onclick="waterBodies()">
+
+💧 Water Bodies
+
+</button>
+
+</div>
+
+<h3 id="simulationResult">
+
+Select a simulation option.
+
+</h3>
+
+</div>
+
+<div class="comparison">
+
+<div class="card">
+
+<h2>Before</h2>
+
+<h1 id="beforeTemp">
+
+42°C
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<h2>After</h2>
+
+<h1 id="afterTemp">
+
+42°C
+
+</h1>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Hotspot Table</h2>
+
+<table class="hotspot-table">
+<thead>
+<tr><th>#</th><th>City</th><th>Temp</th><th>Score</th><th>Risk</th></tr>
+</thead>
+<tbody id="hotspotTable"></tbody>
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Temperature Trend</h2>
+
+<canvas id="lineChart"></canvas>
+
+</div>
+
+<footer>
+
+Made for Hackathon 2026 | Urban Heat Mitigation using Geospatial AI/ML
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

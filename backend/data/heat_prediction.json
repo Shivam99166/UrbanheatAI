@@ -1,0 +1,31 @@
+[
+  {
+    "city":"Delhi",
+    "latitude":28.6139,
+    "longitude":77.2090,
+
+    "ndvi":0.18,
+    "ndbi":0.72,
+    "lst":43,
+    "vegetation":18,
+    "water":5,
+    "builtup":77,
+    "population":18000,
+    "albedo":0.14
+  },
+
+  {
+    "city":"Noida",
+    "latitude":28.5355,
+    "longitude":77.3910,
+
+    "ndvi":0.28,
+    "ndbi":0.58,
+    "lst":39,
+    "vegetation":32,
+    "water":9,
+    "builtup":60,
+    "population":14000,
+    "albedo":0.18
+  }
+]

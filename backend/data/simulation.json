@@ -1,0 +1,37 @@
+{
+  "Delhi": {
+    "trees": {
+      "before_temp": 43,
+      "after_temp": 39,
+      "reduction": 4
+    },
+    "roof": {
+      "before_temp": 43,
+      "after_temp": 40,
+      "reduction": 3
+    },
+    "water": {
+      "before_temp": 43,
+      "after_temp": 38,
+      "reduction": 5
+    }
+  },
+
+  "Noida": {
+    "trees": {
+      "before_temp": 40,
+      "after_temp": 37,
+      "reduction": 3
+    },
+    "roof": {
+      "before_temp": 40,
+      "after_temp": 38,
+      "reduction": 2
+    },
+    "water": {
+      "before_temp": 40,
+      "after_temp": 36,
+      "reduction": 4
+    }
+  }
+}

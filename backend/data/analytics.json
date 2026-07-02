@@ -1,0 +1,30 @@
+{
+    "pie_chart": {
+        "vegetation": 18,
+        "built_up": 72,
+        "water": 10
+    },
+
+    "temperature_trend": [
+        {
+            "date": "2026-07-01",
+            "temperature": 39
+        },
+        {
+            "date": "2026-07-02",
+            "temperature": 40
+        },
+        {
+            "date": "2026-07-03",
+            "temperature": 41
+        },
+        {
+            "date": "2026-07-04",
+            "temperature": 42
+        },
+        {
+            "date": "2026-07-05",
+            "temperature": 43
+        }
+    ]
+}
